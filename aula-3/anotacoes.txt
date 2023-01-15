@@ -1,0 +1,10 @@
+Supondo que seu chefe peça para que você crie uma tela de login em React para
+uma aplicação interna (gerenciar colaboradores da empresa).
+1. CRA
+2. Abrir o visual studio code com seu projeto
+Criar uma tela em React sendo ela composta por:
+1. Title ~ Login
+2. Input 01 ~ Usuário
+3. Input 02 ~ Senha
+4. Button ~ login ~ redirecionar para link da turma no discord
+5. Link ~ Esqueceu a senha? ~ redirecionar para google.com

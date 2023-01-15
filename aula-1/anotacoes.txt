@@ -1,0 +1,102 @@
+Professores:
+-Raniel Mendonça#0744
+-danieldeorange#2339
+
+
+Componentizaçao e introduçao ao react
+
+Conceitos:
+O que sao componentes
+motivaçao para componentizar
+apresentação das bibliotecas principais
+inicialização de um projeto react
+arquitetura de componentes em pastas
+criaçao de componentes
+
+
+O que é react?
+Uma biblioteca JavaScript para criar interfaces de usuário.
+
+Não é uma framework pois depende de outras bibliotecas.
+-react-dom
+-react-router
+É uma biblioteca que depende de outras bibliotecas.
+
+Open source sob a licenca MIT 
+A licenca MIT elimina qualquer tipo de restrição ao uso, modificação e distribuição do codigo fonte de um programa
+No entanto, ela também dá a liberdade para que o desenvolvedor possa utilizar o codigo em um projeto proprietario
+
+
+ECMScript 6 - 2015
+O que há de novo?
+
+Funções arrow
+parâmetros padrão para os argumentos de funções
+Funções map, filter e reduce
+Funções some e every
+Funcao find
+comandos const e let
+spread operator
+template string
+destructuring assignment
+exportação por modulos
+promises
+property shorthand(
+    Você pode agora inializar um objeto, sem precisar definir chave e valor para cada propriedade utilizando o property shorthand. Émais uma forma de agilizar e diminuir o tamanho do código.
+    // antes do ES6
+    function cadastrarProfessor(nome, email, telefone) {
+        var professor = {
+            nome: nome,
+            email: email,
+            telefone: telefone,
+        };
+
+        cadastrar(professor);
+    };
+
+    // com ES6
+    function cadastrarProfessor(nome, email, telefone) {
+        var professor = {
+            nome,
+            email,
+            telefone,
+        };
+
+        cadastrar(professor);
+    };
+)
+
+
+Porque utilizar react?
+-Componentização
+-atualiza e renderiza de forma eficiente apenas os componentes necessários na medida em que os dados mudam
+-SPA
+
+
+Configurando nosso primeiro aplicativo react:
+
+Você vai precisar ter instalado na sua máquina:
+-Node: Node.js® é um ambiente de tempo de execução JavaScript multiplataforma e de código aberto.
+-NPM - Node Package Manager
+
+comandos:
+
+npx create-react-app my-app
+cd my_app
+npm start
+
+ou com typescript:
+
+npx create-react-app my-app --template typescript
+cd my-app
+npm start
+
+
+
+___________________________________
+Exercício inicial (não vale ponto!)
+1. Crie um aplicação do zero (boilerplate) ~ CRA utilizando a ferramenta oficial do Facebook pra criar um projeto em React: Create React App, utilize javascript.
+2. Crie um aplicação do zero (boilerplate) utilizando a ferramenta oficial do Facebook pra criar um projeto em React: Create React App, utilize typescript.
+
+Se possível, suba seu código fonte num repositório GitHub e me envie o link s2
+Mandar pelo Discord
