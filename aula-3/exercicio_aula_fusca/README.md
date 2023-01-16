@@ -1,4 +1,12 @@
+<h1>Exercicio em aula para introdução ao React e sua organização</h1>
+
+![Captura de tela de 2023-01-15 21-43-53](https://user-images.githubusercontent.com/59850893/212576526-4cee919f-d52a-41f2-98f9-183354b7988e.png)
+
+___
+
+
 # Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
