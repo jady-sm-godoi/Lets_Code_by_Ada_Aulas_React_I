@@ -1,0 +1,28 @@
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 18px;
+    line-height: 2rem;
+    padding: 0 7px;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    border-bottom: 1px solid white;
+    outline: 0;
+} 
+
+.input-container label{
+    color: white;
+    font-weight: bold;
+}
+

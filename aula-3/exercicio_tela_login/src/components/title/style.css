@@ -1,0 +1,10 @@
+.title-container{
+    border-bottom: 1px solid white;
+}
+
+.title-container h1{
+    color: white;
+    line-height: 4.5rem;
+    font-size: 50px;
+    width: auto;
+}
