@@ -1,8 +1,9 @@
-a{
+span{
     color: white;
     text-decoration: none;
 }
 
-a:hover{
+span:hover{
     font-weight: bold;
+    cursor: pointer;
 }

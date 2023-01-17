@@ -14,7 +14,18 @@ export function Form(){
     const navigate = useNavigate()
 
     function vaParaHome(){
-        navigate('/home')
+        const userName = document.querySelectorAll('.data-form')
+        if(userName[0].value !== '' && userName[1].value !== ''){
+            navigate('/home')
+        }
+    }
+
+    function vaParaCadastro(){
+        navigate('/sign-up')
+    }
+
+    function vaParaRecuperarPassword(){
+        navigate('/recover-password')
     }
 
     return(
@@ -31,7 +42,10 @@ export function Form(){
                 <Buttom text='Entrar' redirecionar={vaParaHome} />
             </div>
             <div className='links'>
-                <Link text='Esqueceu a senha?' destiny='https://www.google.com'/>
+                <Link text='Não é cadastrado?' destiny={vaParaCadastro}/>
+            </div>
+            <div className='links'>
+                <Link text='Esqueceu a senha?' destiny={vaParaRecuperarPassword}/>
             </div>
         </div>
         </div>
