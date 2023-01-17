@@ -1,9 +1,7 @@
 import './style.css'
 
-export function Buttom({text, destiny}){
+export function Buttom({text, redirecionar}){
     return(
-        <a href={destiny} target='_blank' rel="noopener noreferrer">
-            <button>{text}</button>
-        </a>
+        <button onClick={redirecionar}>{text}</button>
     )
 }

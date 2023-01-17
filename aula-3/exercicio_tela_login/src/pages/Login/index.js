@@ -1,12 +1,24 @@
-import './style.css'
+import { useNavigate } from "react-router-dom";
 
-import { Title } from '../title'
-import { Inputs } from '../inputs'
-import { Buttom } from '../buttom'
-import { Link } from '../link'
+import './style.css'
+import '../../App.css'
+
+import { Title } from '../../components/title'
+import { Inputs } from '../../components/inputs'
+import { Buttom } from '../../components/buttom'
+import { Link } from '../../components/link'
+
 
 export function Form(){
+
+    const navigate = useNavigate()
+
+    function vaParaHome(){
+        navigate('/home')
+    }
+
     return(
+        <div className="App">
         <div className="form-background">
             <div className='cabecalho'>
                 <Title text='Login'/>
@@ -16,11 +28,12 @@ export function Form(){
                 <Inputs text='Password' />
             </div>
             <div className='buttons'>
-                <Buttom text='Login' destiny='https://discord.com/channels/1014299053149929473/1062175752612745266'/>
+                <Buttom text='Entrar' redirecionar={vaParaHome} />
             </div>
             <div className='links'>
                 <Link text='Esqueceu a senha?' destiny='https://www.google.com'/>
             </div>
+        </div>
         </div>
     )
 }

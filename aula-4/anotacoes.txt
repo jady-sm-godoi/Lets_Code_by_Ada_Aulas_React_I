@@ -1,0 +1,13 @@
+React router dom
+https://reactrouter.com/en/main
+
+biblioteca para gerência de rotas da aplicação
+
+Instalação:
+npm i react-router-dom
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+no App.js
+-Router é responsável por gerenciar as rotas
+-Routes engloba as especificações das rotas
+-Route define a rota em si
