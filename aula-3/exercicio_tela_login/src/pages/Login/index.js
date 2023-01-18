@@ -9,22 +9,22 @@ import { Buttom } from '../../components/buttom'
 import { Link } from '../../components/link'
 
 
-export function Form(){
+export const Form = () => {
 
     const navigate = useNavigate()
 
-    function vaParaHome(){
+    const vaParaHome = () => {
         const userName = document.querySelectorAll('.data-form')
         if(userName[0].value !== '' && userName[1].value !== ''){
             navigate('/home')
         }
     }
 
-    function vaParaCadastro(){
+    const vaParaCadastro = () => {
         navigate('/sign-up')
     }
 
-    function vaParaRecuperarPassword(){
+    const vaParaRecuperarPassword = () => {
         navigate('/recover-password')
     }
 

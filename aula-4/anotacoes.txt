@@ -11,3 +11,32 @@ no App.js
 -Router é responsável por gerenciar as rotas
 -Routes engloba as especificações das rotas
 -Route define a rota em si
+
+
+http://localhost:3000/
+
+Protocolo:
+http ou
+https
+
+Domínio:
+localhost
+
+Porta:
+3000
+
+Path:
+/
+http://localhost:3000/home
+
+Protocolo:
+http
+
+Domínio:
+localhost
+
+Porta:
+3000
+
+Path:
+/home

@@ -1,4 +1,5 @@
 import './style.css'
+import PropTypes from 'prop-types'
 
 export function Title({text}){
     return(
@@ -6,4 +7,8 @@ export function Title({text}){
             <h1>{text}</h1>
         </div>
     )
+}
+
+Title.propTypes = {
+    text: PropTypes.string
 }

@@ -1,0 +1,12 @@
+Arraw functions
+
+() => {}
+
+const obterResultado = ({usuario, pontos}) => {
+    return `${usuario} marcou ${pontos} pontos!`;
+}
+
+Proptypes
+
+npm install prop-types --save
+

@@ -5,7 +5,7 @@ import { Buttom } from "../../components/buttom"
 import '../../App.css'
 import './style.css'
 
-export function Home(){
+export const Home = () => {
     const navigate = useNavigate()
 
     function volteParaHome(){

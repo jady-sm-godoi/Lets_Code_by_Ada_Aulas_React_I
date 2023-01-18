@@ -8,11 +8,11 @@ import { Inputs } from '../../components/inputs'
 import { Buttom } from '../../components/buttom'
 
 
-export function SingUp(){
+export const SingUp = () => {
 
     const navigate = useNavigate()
 
-    function vaParaLogin(){
+    const vaParaLogin = () => {
         navigate('/')
     }
 

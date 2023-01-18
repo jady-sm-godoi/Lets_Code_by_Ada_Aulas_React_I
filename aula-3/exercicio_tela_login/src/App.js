@@ -5,7 +5,7 @@ import { Home } from "./pages/home/Home";
 import { SingUp } from "./pages/signUp";
 import { Recover } from "./pages/recoverPassword";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>

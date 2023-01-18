@@ -7,11 +7,11 @@ import { Title } from '../../components/title'
 import { Inputs } from '../../components/inputs'
 import { Buttom } from '../../components/buttom'
 
-export function Recover(){
+export const Recover = () => {
 
     const navigate = useNavigate()
 
-    function vaParaLogin(){
+    const vaParaLogin = () => {
         navigate('/')
     }
 
