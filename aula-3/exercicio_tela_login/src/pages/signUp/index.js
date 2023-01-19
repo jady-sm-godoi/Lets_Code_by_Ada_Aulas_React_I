@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import './style.css'
+import '../styles.css'
 import '../../App.css'
 
 import { Title } from '../../components/title'

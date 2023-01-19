@@ -7,6 +7,7 @@
   align-items: center;
   background-color: #464d6a;
   background: url('./assets/background.png');
+  background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
