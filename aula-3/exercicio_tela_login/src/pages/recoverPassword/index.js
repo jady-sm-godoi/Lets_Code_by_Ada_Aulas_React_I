@@ -25,7 +25,7 @@ export const Recover = () => {
                 <Inputs text='e-mail' />
             </div>
             <div className='buttons'>
-                <Buttom text='Enviar' redirecionar={vaParaLogin} />
+                <Buttom text='Enviar' aoClicar={vaParaLogin} />
             </div>            
         </div>
         </div>

@@ -28,7 +28,7 @@ export const SingUp = () => {
                 <Inputs text='Repeat password' />
             </div>
             <div className='buttons'>
-                <Buttom text='Registrar' redirecionar={vaParaLogin} />
+                <Buttom text='Registrar' aoClicar={vaParaLogin} />
             </div>
         </div>
         </div>

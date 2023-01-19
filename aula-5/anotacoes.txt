@@ -10,3 +10,36 @@ Proptypes
 
 npm install prop-types --save
 
+Estado
+nos permite gerenciar a mudança de dados emuma aplicacao
+
+import {useState} from 'react'
+
+const[state, setState] = useState(initialState)
+
+state: nome do Estado
+setState: funçao que muda o estado 
+
+
+Exercicio:
+
+ok 1. Troque todas as funções ES5 para arrow function (ES6)
+ok 2. Utilize a biblioteca PropTypes para validar duas quaisquer propriedades de seus componentes
+ok 3. Utilize a propriedade defaultProps da lib PropTypes para passar valores padrão para seus componentes
+ok 4. Crie um state utilizando o Hook do React useState para definir o título da nossa tela de login
+ok 5. Use um componente button para alterar o state da propriedade acima (title da tela de login)
+ok 6. Adicione uma label na nossa tela de login e a modifique de acordo com o valor digitado pelo usuário no input "Usuário"
+
+Chamada na tela de login:
+<Subtitle text={subtitle} />
+
+
+Miqueias:
+
+Crie um banco de dados estático dentro do useState. 
+Esse state vai ser composto por um array de objetos.
+Cada objeto vai ter duas propriedades: username e password.
+O input de usuario sera referente à propriedade username.
+O input de password sera referente à propriedade password.
+Caso o usuário digite suas credenciais inválidas exibe um alert("Usuário ou senha incorreta")
+Caso as credenciais estejam corretas ele vá para a home.

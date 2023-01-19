@@ -1,13 +1,20 @@
 import './style.css'
 import PropTypes from 'prop-types'
 
-export const Buttom = ({text, redirecionar}) => {
+export const Buttom = ({text, aoClicar, color, bgColor}) => {
     return(
-        <button onClick={redirecionar}>{text}</button>
+        <button style={{background: bgColor, color:color}} onClick={aoClicar} >{text}</button>
     )
 }
 
 Buttom.propTypes = {
     text: PropTypes.string,
-    redirecionar: PropTypes.func,
+    aoClicar: PropTypes.func,
+    bgColor: PropTypes.string,
+    color: PropTypes.string,
+}
+
+Buttom.defaultProps = {
+    bgColor: '#a13954',
+    color: '#fff'
 }

@@ -15,7 +15,7 @@ export const Home = () => {
         <div className="App">
             <h1>Página Home</h1>
             <div className="button-container">
-                <Buttom text='voltar' redirecionar={volteParaHome}/>
+                <Buttom text='voltar' aoClicar={volteParaHome}/>
             </div>
         </div>
     )

@@ -30,3 +30,11 @@
 .buttons{
     width: 100%;
 }
+
+.buttons-container{
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
