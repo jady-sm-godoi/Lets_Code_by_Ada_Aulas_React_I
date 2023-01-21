@@ -1,11 +1,12 @@
 <h1>Tela de Login</h1>
 
-![Captura de tela de 2023-01-18 22-47-09](https://user-images.githubusercontent.com/59850893/213336371-5713ab3d-cad4-414c-90b4-03c010d4ae55.png)
 
+![Captura de tela de 2023-01-21 19-00-24](https://user-images.githubusercontent.com/59850893/213888614-d57abf8c-05fb-4db7-a6b8-eeb5afa88639.png)
 
 - Botão leva para a página do Discord da turma Front-end OiDevs by Ada
 
 - O link leva para a página do Google
+
 
 ___
 
