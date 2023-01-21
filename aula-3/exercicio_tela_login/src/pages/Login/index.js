@@ -14,7 +14,10 @@ import { Subtitle } from "../../components/subtitle";
 export const Form = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("login");
-  const [subtitle, setSubtitle] = useState();
+  const [showError, setShowerror] = useState(false);
+  const [labelColor, setLabelColor] = useState('white');
+  const [user, setUser] = useState();
+  const [password, setPassword] = useState();
   const [users] = useState([
     {
       username: "jady",
@@ -30,26 +33,17 @@ export const Form = () => {
     setTitle("Welcome,");
   };
 
-  const mudarSubtitulo = () => {
-    const user = document.querySelector(".data-form").value;
-    setSubtitle(user);
-  };
 
   const vaParaHome = () => {
-    const userName = document.querySelectorAll(".data-form");
-
-    const userExist = users.filter(
-      (user) =>
-        user.username === userName[0].value &&
-        user.password === userName[1].value
-    );
-
-    if (userExist.length > 0) {
-      navigate("/home");
-    } else {
-      alert("usuário ou senha estão incorretos!");
+    const userSelected = users.find((u) => u.username === user && u.password === password)
+    
+    if(userSelected){
+      navigate("/home")
+    }else{
+      setShowerror(true)
+      setLabelColor('#d33b64')
     }
-  };
+  }
 
   const vaParaCadastro = () => {
     navigate("/sign-up");
@@ -66,11 +60,11 @@ export const Form = () => {
           <Title text={title} />
         </div>
         <div className="cabecalho">
-          <Subtitle text={subtitle} />
+        {showError && <Subtitle text='Usuário não encontrado!' />}
         </div>
         <div className="form-fields">
-          <Inputs changing={mudarSubtitulo} />
-          <Inputs text="Password" />
+          <Inputs color={labelColor} changing={(e) => setUser(e.target.value)} />
+          <Inputs color={labelColor} changing={(e) => setPassword(e.target.value)} text="Password" />
         </div>
         <div className="buttons-container">
           <div className="buttons">
@@ -94,5 +88,13 @@ export const Form = () => {
     </div>
   );
 };
+const missao = [
+  {
+    executar: () => console.log('faz'),
+    
+  }
+]
+
+missao.forEach((ideia) => ideia.executar())
 
 // export default Form;
