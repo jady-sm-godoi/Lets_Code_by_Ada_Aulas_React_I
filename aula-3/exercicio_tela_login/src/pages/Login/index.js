@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 // import "./style.css";
-import '../styles.css'
+import "../styles.css";
 import "../../App.css";
 import { useState } from "react";
 
@@ -14,18 +14,29 @@ import { Subtitle } from "../../components/subtitle";
 export const Form = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("login");
-  const [showError, setShowerror] = useState(false);
-  const [labelColor, setLabelColor] = useState('white');
+  const [showError, setShowError] = useState(false);
+  const [labelColor, setLabelColor] = useState("white");
   const [user, setUser] = useState();
   const [password, setPassword] = useState();
   const [users] = useState([
     {
+      id: 1,
       username: "jady",
       password: "123",
     },
     {
+      id: 2,
       username: "ciabatta",
       password: "miau",
+    },
+    {
+      id: 2,
+      username: "zeca",
+      password: "miau",
+    },
+    {
+      username: "cesar",
+      password: "123",
     },
   ]);
 
@@ -33,17 +44,18 @@ export const Form = () => {
     setTitle("Welcome,");
   };
 
-
   const vaParaHome = () => {
-    const userSelected = users.find((u) => u.username === user && u.password === password)
-    
-    if(userSelected){
-      navigate("/home")
-    }else{
-      setShowerror(true)
-      setLabelColor('#d33b64')
+    const userSelected = users.find(
+      (u) => u.username === user && u.password === password
+    );
+
+    if (userSelected) {
+      navigate("/home");
+    } else {
+      setShowError(true);
+      setLabelColor("#d33b64");
     }
-  }
+  };
 
   const vaParaCadastro = () => {
     navigate("/sign-up");
@@ -60,11 +72,22 @@ export const Form = () => {
           <Title text={title} />
         </div>
         <div className="cabecalho">
-        {showError && <Subtitle text='Usuário não encontrado!' />}
+          {showError ? (
+            <Subtitle text="Usuário não encontrado!" />
+          ) : (
+            <span>Por favor, entre com login e senha!</span>
+          )}
         </div>
         <div className="form-fields">
-          <Inputs color={labelColor} changing={(e) => setUser(e.target.value)} />
-          <Inputs color={labelColor} changing={(e) => setPassword(e.target.value)} text="Password" />
+          <Inputs
+            color={labelColor}
+            changing={(e) => setUser(e.target.value)}
+          />
+          <Inputs
+            color={labelColor}
+            changing={(e) => setPassword(e.target.value)}
+            text="Password"
+          />
         </div>
         <div className="buttons-container">
           <div className="buttons">
@@ -84,17 +107,22 @@ export const Form = () => {
         <div className="links">
           <Link text="Esqueceu a senha?" destiny={vaParaRecuperarPassword} />
         </div>
+        <br></br>
+        <ul>
+          {users.map((user) => (
+            <li
+              key={user.id}
+              onClick={() => {
+                console.log("alterado");
+              }}
+            >
+              {user.username}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
 };
-const missao = [
-  {
-    executar: () => console.log('faz'),
-    
-  }
-]
-
-missao.forEach((ideia) => ideia.executar())
 
 // export default Form;

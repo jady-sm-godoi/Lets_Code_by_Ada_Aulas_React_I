@@ -1,0 +1,8 @@
+Stack (tecnologias e linguagens): React, JS(components Funcionais com ES6)
+
+Callback -> função que é passada para outra função para ser chamada logo depois que alguma tarefa seja concluida
+    const print = (Callback) => {
+        Callback()
+    }
+
+map() 
