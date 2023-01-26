@@ -20,23 +20,31 @@ export const Form = () => {
   const [password, setPassword] = useState();
   const [users] = useState([
     {
-      id: 1,
       username: "jady",
       password: "123",
+      img: 'https://blog.arbolez.com/wp-content/uploads/2018/08/nomes-para-gatos-gatas.jpg',
+      email: 'jady.s.m@gmail.com'
     },
     {
       id: 2,
       username: "ciabatta",
       password: "miau",
+      img: 'http://www.petdoctor.com.br/wp-content/uploads/2021/08/EstrabismoEmGatos-Topo-Set21.png',
+      email: 'ciabatta@gmail.com'
     },
     {
       id: 2,
       username: "zeca",
       password: "miau",
+      img: 'https://1.bp.blogspot.com/-Wq2lcq9_a4I/Tc2lLWOkNVI/AAAAAAAABVM/Wao0rm-vWe4/s1600/gatinho-5755.jpg',
+      email: 'zeca@gmail.com'
     },
     {
+      id: 4,
       username: "cesar",
       password: "123",
+      img: 'https://chefbob.com.br/wp-content/uploads/2020/10/2020-10-16-problemas-de-pele-em-gatos.jpg',
+      email: 'cesar.godoi@gmail.com'
     },
   ]);
 
@@ -50,7 +58,7 @@ export const Form = () => {
     );
 
     if (userSelected) {
-      navigate("/home");
+      navigate("/home", { state: { usersList: users } });
     } else {
       setShowError(true);
       setLabelColor("#d33b64");
@@ -78,6 +86,7 @@ export const Form = () => {
             <span>Por favor, entre com login e senha!</span>
           )}
         </div>
+        <br/>
         <div className="form-fields">
           <Inputs
             color={labelColor}
@@ -107,7 +116,8 @@ export const Form = () => {
         <div className="links">
           <Link text="Esqueceu a senha?" destiny={vaParaRecuperarPassword} />
         </div>
-        <br></br>
+        <br/>
+        <Subtitle text={"Usuários: "} />
         <ul>
           {users.map((user) => (
             <li

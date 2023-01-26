@@ -6,3 +6,8 @@ Callback -> função que é passada para outra função para ser chamada logo de
     }
 
 map() 
+
+navigate("/home", {state: {listaDeUsuario: usuarios}})
+
+...
+
