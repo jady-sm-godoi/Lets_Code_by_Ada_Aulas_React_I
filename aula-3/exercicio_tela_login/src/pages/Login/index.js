@@ -20,13 +20,14 @@ export const Form = () => {
   const [password, setPassword] = useState();
   const [users] = useState([
     {
+      id: 0,
       username: "jady",
       password: "123",
       img: 'https://blog.arbolez.com/wp-content/uploads/2018/08/nomes-para-gatos-gatas.jpg',
       email: 'jady.s.m@gmail.com'
     },
     {
-      id: 2,
+      id: 1,
       username: "ciabatta",
       password: "miau",
       img: 'http://www.petdoctor.com.br/wp-content/uploads/2021/08/EstrabismoEmGatos-Topo-Set21.png',
@@ -40,7 +41,7 @@ export const Form = () => {
       email: 'zeca@gmail.com'
     },
     {
-      id: 4,
+      id: 3,
       username: "cesar",
       password: "123",
       img: 'https://chefbob.com.br/wp-content/uploads/2020/10/2020-10-16-problemas-de-pele-em-gatos.jpg',
@@ -58,7 +59,7 @@ export const Form = () => {
     );
 
     if (userSelected) {
-      navigate("/home", { state: { usersList: users } });
+      navigate("/home", { state: { usersList: users, logged: user } });
     } else {
       setShowError(true);
       setLabelColor("#d33b64");

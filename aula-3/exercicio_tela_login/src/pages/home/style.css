@@ -3,5 +3,7 @@ h1{
 }
 
 .button-container{
-    width: 100px;
+    width: 50vw;
+    display: flex;
+    gap: 20px;
 }

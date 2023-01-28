@@ -1,0 +1,16 @@
+Ciclo de Vida:
+
+Inicializaçao - prepara as variaveis - define o estado do componente
+
+Montagem - renderiza o estado inicial (return)
+
+Atualizaçao - alteraçao do componente com a interaçao do usuario
+- renderizar (novo estado)
+
+- matar a aplicacao (não usa mais)
+
+
+todas as funcoes do ciclo de vida foram resumidas em um unica:
+useEffect()
+
+useEffect - executa um bloco javascript após a renderização do componente
